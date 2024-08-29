@@ -1,0 +1,62 @@
+
+/* Analytics.css */
+ 
+.analytics-container {
+  margin-top: -150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:  20px;
+  height: 900px;
+}
+
+.button-anal-div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.button-anal {
+  float: left;
+  height: 80px !important;
+  text-align: center;
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  padding: 10px 10px; 
+  
+  margin-bottom: 50px;
+  font-size: 18px; 
+  cursor: pointer; 
+  /* transition: background-color 0.3s ease; */
+  width: 300px;
+  justify-content: space-between !important; 
+  gap: 10px !important; 
+ }
+
+ 
+.chart-row {
+  display: flex;
+  margin-bottom:  20px;
+}
+ 
+/* #lineChart.chart{
+  height: auto;
+  width: auto;
+} */
+.chart-column {
+  flex:  1;
+  /* display: flex; */
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 700px; /* Adjust based on your needs */
+  height: 500px; /* Adjust based on your needs */
+}
+
+
+.chart canvas {
+  border:  1px solid #3a1616;
+  box-shadow:  2px  2px  5px rgba(0,  0,  0,  0.1);
+}
+ 

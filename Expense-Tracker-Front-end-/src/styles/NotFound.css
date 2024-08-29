@@ -1,0 +1,21 @@
+#image-div {
+    width: 400px;
+    height: 400px;
+}
+
+#div-404 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#error-body {
+    display: flex;
+    flex-direction: column;
+}

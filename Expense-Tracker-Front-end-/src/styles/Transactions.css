@@ -1,0 +1,366 @@
+/* Dashboard.css */
+#transaction-div {
+  margin-left: 7%;
+}
+#budget-options {
+  margin-left: -10%;
+}
+/* Existing styles */
+#div-modify-expense {
+  margin-left:   30%;
+  width:   500px;
+  height:   700px;
+  z-index:   10;
+  background-color: #d60606; /* Light grey background */
+  font-size:   17px;
+  color: black; /* Black text for better contrast */
+  position: absolute;
+  display: flex;
+  visibility: hidden;
+  border-radius:   2pt solid;
+  border:   1px solid #ddd; /* Light grey border */
+}
+
+#div-filter-expense {
+  margin-left:   30%;
+  width:   500px;
+  height:   700px;
+  z-index:   10;
+  background-color: #d60606; /* Light grey background */
+  font-size:   17px;
+  color: black; /* Black text for better contrast */
+  position: absolute;
+  display: flex;
+  visibility: hidden;
+  border-radius:   2pt solid;
+  border:   1px solid #ddd; /* Light grey border */
+}
+
+/* New styles for tables and buttons */
+#expense-table {
+  margin-left: -50px;
+  width:   100%;
+  
+  border-collapse: collapse;
+}
+
+
+#expense-table th,
+#expense-table td {
+  
+  border:   2px solid #ddd;
+  padding:   4px;
+  text-align: left;
+}
+
+.expense-table-th-td {
+  width: 110px;
+  height: 45px;
+}
+
+.expense-table-date-td {
+  min-width: 150px;
+}
+
+.expense-table-category-td {
+  min-width: 170px;
+  width: 200px;
+}
+
+
+.expense-table-merchant-td {
+  min-width: 150px;
+  width: 250px;
+}
+
+.expense-table-amount-td {
+  width: 100px !important;
+}
+
+.expense-table-payment-td {
+  min-width: 100px;
+}
+
+
+
+.expense-table-edit-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px !important;
+  width: 150px !important;
+}
+
+#expense-table th {
+  user-select: none;
+  text-align: center;
+  background-color: #e26f6f;
+  color: white;
+}
+
+#expense-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#expense-table tr:hover {
+  background-color: #ddd;
+}
+
+#expense-table button {
+  background-color: #e26f6f;
+  color: white;
+  padding:   5px   10px;
+  border: none;
+  border-radius:   5px;
+  cursor: pointer;
+  margin-right:   7px;
+}
+
+#table-foot {
+  justify-content: center;
+}
+
+.expense-table-index {
+  height: 45px;
+  width: 50px !important;
+  text-align: center !important;
+}
+
+#expense-table button:hover {
+  background-color: #e26f6f;
+}
+
+#page-selector {
+  justify-content: center;
+  height: 100px;
+  display: flex;
+  margin-top: 10px;
+}
+#expense-table-selector-button {
+  background-color: #e26f6f;
+  color: white;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+  padding:   5px   10px;
+  border: none;
+  border-radius:   5px;
+  cursor: pointer;
+  margin-right:   7px;
+  height: 30px !important;
+}
+
+#expense-table-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+#expense-table-options-button {
+  border-radius: 0px;
+  margin-right: 50px;
+}
+
+.report-input input {
+  padding:   10px;
+  font-size:   16px;
+  border:   1px solid #ccc;
+  border-radius:   4px;
+  width:   100%;
+  box-sizing: border-box;
+  margin-bottom:   10px;
+}
+
+/* Styles for the report buttons */
+.report-button {
+  padding:   10px   20px;
+  font-size:   16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius:   4px;
+  cursor: pointer;
+  transition: background-color   0.3s ease;
+}
+
+.report-button:hover {
+  background-color: #0056b3;
+}
+/* Styles for the budget display */
+.budget-display {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom:   20px;
+padding:   10px;
+background-color: #f8f9fa;
+border-radius:   4px;
+}
+
+.budget-display div {
+font-size:   16px;
+}
+
+/* Styles for the budget goal input */
+.budget-goal-input {
+padding:   10px;
+font-size:   16px;
+border:   1px solid #ccc;
+border-radius:   4px;
+width:   100%;
+box-sizing: border-box;
+margin-bottom:   10px;
+}
+
+/* Styles for the remaining budget display */
+.remaining-budget-display {
+font-size:   16px;
+color: #28a745;
+}
+
+/* Styles for the report container */
+.report-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom:   20px;
+}
+
+/* Styles for the report input */
+.report-input {
+flex:  1;
+margin-right:   10px;
+}
+
+/* Styles for the report buttons */
+.report-button {
+/* background: linear-gradient(to right, #009fff, #ec2f4b); */
+background: linear-gradient(to right, #ffc0cb, #e26f6f);
+border: none;
+color: white;
+padding:   10px   20px;
+font-size:   16px;
+border-radius:   5px;
+cursor: pointer;
+transition: all   0.3s ease;
+box-shadow:   0   5px   15px rgba(0,   0,   0,   0.2);
+}
+
+.report-button:hover {
+transform: translateY(-3px);
+box-shadow:   0   7px   20px rgba(0,   0,   0,   0.3);
+}
+
+.report-button:active {
+transform: translateY(0);
+box-shadow:   0   5px   15px rgba(0,   0,   0,   0.2);
+}
+
+/* Additional styles for the layout */
+.app-container {
+display: flex;
+}
+
+
+/* Overlay styles */
+.overlay {
+position: fixed;
+top:   0;
+left:   0;
+width:   100%;
+height:   100%;
+background-color: rgba(0,   0,   0,   0.5); /* Black background with   50% opacity */
+z-index:   1000; /* Ensure the overlay is above other content */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Color Scheme */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #f8f9fa;
+  --error-color: #dc3545;
+}
+
+/* Spacing and Layout */
+.report-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:  20px;
+  padding:  20px;
+  background-color: var(--secondary-color);
+  border-radius:  5px;
+  box-shadow:  0  2px  4px rgba(0,  0,  0,  0.1);
+}
+
+/* Buttons */
+.report-button {
+  padding: 6px 12px;
+  font-size:  16px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius:  4px;
+  cursor: pointer;
+  transition: background-color  0.3s ease, transform  0.3s ease;
+  box-shadow:  0  2px  4px rgba(0,  0,  0,  0.1);
+}
+
+.report-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow:  0  4px  8px rgba(0,  0,  0,  0.2);
+}
+
+.report-button:active {
+  transform: translateY(0);
+  box-shadow:  0  2px  4px rgba(0,  0,  0,  0.1);
+}
+
+/* Forms */
+.report-input {
+  flex:  1;
+  margin-right:  10px;
+}
+
+.report-input input,
+.report-input select {
+  padding:  10px;
+  font-size:  16px;
+  border:  1px solid #ccc;
+  border-radius:  4px;
+  width:  100%;
+  box-sizing: border-box;
+  margin-bottom:  10px;
+}
+
+/* Error Messages */
+.error-message {
+  color: var(--error-color);
+  font-weight: bold;
+  margin-bottom:  10px;
+}
+
+/* Responsive Design */
+@media (max-width:  768px) {
+  .report-container {
+    flex-direction: column;
+  }
+
+  .report-input {
+    margin-right:  0;
+  }
+}

@@ -1,0 +1,23 @@
+#button-signup
+{
+    width:300px; 
+    float:left;
+    padding:0px; 
+    padding-top:10px; 
+    padding-bottom:10px;
+    font-size:14px;
+    border-radius: 8px;
+
+}
+
+#signup-input {
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+#signup-title {
+    color: black !important;
+    font-size: 28px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,33 @@
+
+#button-signin
+{
+    width:100px; 
+    float:left;
+    padding:0px; 
+    padding-top:10px; 
+    padding-bottom:10px;
+    font-size:12px;
+    border-radius: 8px;
+}
+
+#button-forgot {
+    width:195px; 
+    float:right; 
+    padding:0px; 
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:12px;
+    border-radius: 8px;
+}
+
+#signin-input {
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+#signin-title {
+    color: black !important;
+    font-size: 28px;
+    margin-bottom: 30px;
+}

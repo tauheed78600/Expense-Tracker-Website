@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+   }
+   
+   .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+   }
+
+   .update-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff8c8c;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 400px; /* Adjust the width as needed */
+    max-width: 90%; /* Ensures the modal doesn't exceed the screen width */
+    margin: 0 auto; /* Centers the modal horizontally */
+   }
+   
+   .update-modal h2 {
+    margin-top: 0;
+    color: #333;
+   }
+   
+   .update-modal label {
+    display: block;
+    margin-bottom: 5px;
+   }
+   
+   .update-modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+   }
+   
+   .update-modal button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+   }
+   
+   .update-modal button:hover {
+    background-color: #cbd5e1;
+   }
+   
+   .userDash{
+    color: black !important;
+    font-weight: 400 !important;
+    margin: 0%;
+   }
+   .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+   }
+
+   .h1 {
+    grid-column: 1 / -1;
+    width: 100%;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+   }
+   .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border: 1px solid #d2d2d3;
+    border-radius: 5px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+   }
+   .section:first-child {
+    border-left: 7px solid #246dec;
+   }
+   .section:nth-child(2) {
+    border-left: 7px solid #f5b74f;
+   }
+   .section:nth-child(3) {
+    border-left: 7px solid #367952;
+   }
+   .section:nth-child(4) {
+    border-left: 7px solid #cc3c43;
+   }
+   .section:nth-child(5) {
+    border-left: 7px solid #e8fd07;
+   }
+   .section > span {
+    font-size: 20px;
+    font-weight: 600;
+   }
+   .section-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .section-text > p {
+    font-size: 18px;
+    margin-right: 10px;
+   }
+   .section > span {
+    font-size: 35px;
+    margin-right: 10px;
+   }
+   .update-btn {
+    background-color: #01060b;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+   }
+   .update-btn:hover {
+    background-color: #000408;
+   }
+   .update-section {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+   }
+
+   .nav-links.active {
+    background-color: #FF8C8C; /* Change this to the color you want for the active item */
+  }
+   
+  
