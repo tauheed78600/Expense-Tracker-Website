@@ -72,7 +72,7 @@ export class LoginController
         async forgotpassword(@Body('email') email: string)
         {
           console.log("email", email)
-          console.log("inside forgot password")
+          console.log("inside forgot password12345")
           await this.loginService.sendResetLink(email);
           return { message: 'Check your email for the reset link.' };
         }  

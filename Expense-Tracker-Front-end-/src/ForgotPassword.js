@@ -95,6 +95,7 @@ const ForgotPassword = () => {
             { email },
             { headers: { "Content-Type": "application/json" } }
           );
+          console.log("response forgot password", response)
           if (response) {
             setContent(masterContent["success"]);
             setPopupState(true);

@@ -7,6 +7,7 @@ import { SendGridService } from './sendgrid.service';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from "@nestjs/jwt";
 import { Expense } from 'src/entity/expense.entity';
+import { EmailService } from './email.service';
 
 
 @Injectable()
@@ -19,6 +20,7 @@ export class LoginService {
     private readonly userRepository: Repository<UserEntity>,
     private readonly sendGridService: SendGridService, 
     private readonly jwtService: JwtService,
+    private readonly emailService: EmailService
   ) {}
 
   async updateUsername(userId: number, username: string,): Promise<any>
@@ -105,6 +107,7 @@ export class LoginService {
 
   async sendResetLink(email: string): Promise<void> {
     const user = await this.userRepository.findOne({ where: { email } });
+    console.log("user line 110", user)
     if (user) {
       const token = Math.random().toString(20).substring(2, 12);
       console.log("token", token)
@@ -112,15 +115,21 @@ export class LoginService {
       const resetUrl = `http://localhost:3001/reset-password?token=${token}`;
 
       // Use SendGrid to send the email
-      await this.sendGridService.send({
-        to: email,
-        from: 'Tdarekar@parkar.digital', 
-        subject: 'Password Reset Request',
-        text: `Click on the below Link to reset the password`,
-        html: `<p>Click on the following link to reset your password:</p><a href="${resetUrl}">${resetUrl}</a>`,
+      // await this.sendGridService.send({
+      //   to: email,
+      //   from: 'Tdarekar@parkar.digital', 
+      //   subject: 'Password Reset Request',
+      //   text: `Click on the below Link to reset the password`,
+      //   html: `<p>Click on the following link to reset your password:</p><a href="${resetUrl}">${resetUrl}</a>`,
 
-      });
+      // });
+      await this.emailService.sendEmail(
+        email,
+        'Password Reset Request',`Click on the below Link to reset the password`,
+        `<p>Click on the following link to reset your password:</p><a href="${resetUrl}">${resetUrl}</a>`
+      );
     } else {
+      console.log("exception found line 131")
       throw new NotFoundException('Email not found');
     }
   }
@@ -132,13 +141,13 @@ export class LoginService {
       this.tokenCache[token] = email;
       const resetUrl = `http://localhost:3001/reset-password?token=${token}`;
 
-      // Use SendGrid to send the email
-      await this.sendGridService.send({
-        to: email,
-        from: 'Tdarekar@parkar.digital', 
-        subject: `Feedback from ${fullName}`,
-        text: message,
-      });
+      await this.emailService.sendEmail(
+        email,
+        `Feedback from ${fullName}`,
+        message,
+        '<p>Thank You</p>'
+      );
+      
   }
 
   async sendEmailBudgetExceeded(email: string): Promise<void> {
@@ -149,14 +158,13 @@ export class LoginService {
       this.tokenCache[token] = email;
       const resetUrl = `http://localhost:3001/reset-password?token=${token}`;
 
-      // Use SendGrid to send the email
-      await this.sendGridService.send({
-        to: email,
-        from: 'Tdarekar@parkar.digital', 
-        subject: 'Monthly Budget Goal Exceeded',
-        text: `Dear User, Your monthly budget has been exceeded. Thank You`,
-        
-      });
+      await this.emailService.sendEmail(
+        email,
+        'Monthly Budget Goal Exceeded',
+        `Dear User, Your monthly budget has been exceeded`,
+        '<p>Thank You</p>'
+      );
+      
     } else {
       throw new NotFoundException('Email not found');
     }
@@ -170,16 +178,18 @@ export class LoginService {
       this.tokenCache[token] = email;
       const resetUrl = `http://localhost:3001/reset-password?token=${token}`;
 
-      // Use SendGrid to send the email
-      await this.sendGridService.send({
-        to: email,
-        from: 'Tdarekar@parkar.digital', 
-        subject: 'Monthly Budget Goal 90% Reached',
-        text: `Dear User, Your monthly budget you have reached 90% spending limit of your monthly budget. Thank You`,
-      });
+
+      await this.emailService.sendEmail(
+        email,
+        'Monthly Budget Goal 90% Reached',
+        `Dear User, Your monthly budget you have reached 90% spending limit of your monthly budget.`,
+        '<p>Thank You</p>'
+      );
     } else {
       throw new NotFoundException('Email not found');
     }
+
+    
   }
 
   async validateToken(token: string)

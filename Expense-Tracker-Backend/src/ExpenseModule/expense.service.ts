@@ -5,8 +5,7 @@ import e from 'express';
 import { Expense } from 'src/entity/expense.entity';
 import { UserEntity } from 'src/entity/user.entity';
 import { Repository } from 'typeorm';
-
-
+import { EmailService } from './email.service';
 
 
 @Injectable()
@@ -17,7 +16,7 @@ export class ExpenseService {
         private readonly ExpenseRepository: Repository<Expense>,
         @InjectRepository(UserEntity) 
         private readonly userRepo: Repository<UserEntity>,
-        
+        private readonly emailService: EmailService
       ){}
 
      
@@ -45,6 +44,14 @@ export class ExpenseService {
           user.remaining_budget = 0
           await this.userRepo.save(user)
           throw new HttpException('Budget limit Exceeded', HttpStatus.BAD_REQUEST);
+        }
+        if (remaining_budget < user.monthly_budget * 0.1){
+          await this.emailService.sendEmail(
+            user.email,
+            'Monthly Budget Goal Exceeded',
+            `Dear User, 90% of monthly budget has been exceeded`,
+            '<p>Thank You</p>'
+          );
         }
         
         user.remaining_budget = user.remaining_budget - expenseEntity.amount

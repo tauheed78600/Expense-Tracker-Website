@@ -8,11 +8,12 @@ import { SendGridService } from './sendgrid.service';
 import { ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt'; 
 import { JwtStrategy } from './jwt.strategy';
+import { EmailService } from './email.service';
 
 @Module({
     
   controllers: [LoginController],
-  providers: [LoginService, SendGridService, ConfigService, JwtStrategy],
+  providers: [LoginService, SendGridService, ConfigService, JwtStrategy, EmailService],
   imports: [
     TypeOrmModule.forFeature([UserEntity]),
     JwtModule.register({ // Register JwtModule with options

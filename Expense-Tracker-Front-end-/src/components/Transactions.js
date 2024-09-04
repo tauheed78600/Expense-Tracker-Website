@@ -172,7 +172,7 @@ export default function Transactions({ userId }) {
                 }
                 setMasterExpenses(newArray);
                
-                const emailId = response.data.email  
+                const emailId = response.data.email
                 
                 const response1 = await axios.get(`http://localhost:3000/total/${accessToken}`, {
                             headers: {
@@ -180,9 +180,11 @@ export default function Transactions({ userId }) {
                             },
                           });
                 // console.log("response1234", response1)
-                
+                console.log("response1.data.remaining_budget",response1.data.remaining_budget, response1.data.monthly_budget)
+
                 if (localStorage.getItem("lastMonthNineReachedEmailSent") == 0)
                 {
+                    console.log("response1.data.remaining_budget",response1.data.remaining_budget, response1.data.monthly_budget * 0.1)
                     if (response1.data.remaining_budget <= response1.data.monthly_budget * 0.1) {
                     const currentMonth = new Date().getMonth();
                     localStorage.setItem("lastMonthNineReachedEmailSent", 1)
