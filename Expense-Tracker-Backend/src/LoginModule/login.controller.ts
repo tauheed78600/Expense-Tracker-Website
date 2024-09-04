@@ -88,7 +88,7 @@ export class LoginController
             console.log("message", message)
             console
             console.log("Inside feedback functionality")
-            var email = "Tdarekar@parkar.digital"
+            var email = "tauheeddarekar786@gmail.com"
             await this.loginService.sendFeedback(email, fullName, message);
             return { message: 'Feedback sent Successfully' };
         }

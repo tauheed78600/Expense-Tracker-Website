@@ -50,7 +50,7 @@ export class ExpenseService {
             user.email,
             'Monthly Budget Goal Exceeded',
             `Dear User, 90% of monthly budget has been exceeded`,
-            '<p>Thank You</p>'
+            '<p>Dear User, 90% of monthly budget has been exceeded. Thank You</p>'
           );
         }
         

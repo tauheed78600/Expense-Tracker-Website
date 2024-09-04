@@ -145,7 +145,7 @@ export class LoginService {
         email,
         `Feedback from ${fullName}`,
         message,
-        '<p>Thank You</p>'
+        `<p>${message}</p>`
       );
       
   }
