@@ -19,8 +19,6 @@ export class ExpenseService {
         private readonly emailService: EmailService
       ){}
 
-     
-
       async AddingExpenses(expenseEntity: Expense, userId: number){
         
         const user = await this.userRepo.findOne({where:{ userId}});
@@ -45,16 +43,9 @@ export class ExpenseService {
           await this.userRepo.save(user)
           throw new HttpException('Budget limit Exceeded', HttpStatus.BAD_REQUEST);
         }
-        if (remaining_budget < user.monthly_budget * 0.1){
-          await this.emailService.sendEmail(
-            user.email,
-            'Monthly Budget Goal Exceeded',
-            `Dear User, 90% of monthly budget has been exceeded`,
-            '<p>Dear User, 90% of monthly budget has been exceeded. Thank You</p>'
-          );
-        }
         
         user.remaining_budget = user.remaining_budget - expenseEntity.amount
+
         await this.userRepo.save(user)
         return this.ExpenseRepository.save(expenseEntity);
       }
@@ -124,10 +115,10 @@ export class ExpenseService {
                 await this.userRepo.save(user)
               }    
             }
-          }        
+        }
       }
 
-      async UpdatingExpenses(expense: Expense, userId: number) {
+      async updatingExpenses(expense: Expense, userId: number) {
        
         const expenseEnt = await this.ExpenseRepository.findOne({ where: { expenseId: expense.expenseId } });
         if (!expenseEnt) {
@@ -142,8 +133,7 @@ export class ExpenseService {
         {
           throw new HttpException('Budget limit Exceeded', HttpStatus.BAD_REQUEST);
         }
-        console.log("expenseEnt.amount", expenseEnt.amount)
-        console.log("expense.amount", expense.amount)
+
         const amountDifference = expense.amount - expenseEnt.amount;
 
         // Update the expense amount

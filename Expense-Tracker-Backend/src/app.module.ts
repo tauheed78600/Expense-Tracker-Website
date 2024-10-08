@@ -19,7 +19,7 @@ import { join } from 'path';
       transport: {
         host: 'smtp.gmail.com',
         port: 587,
-        secure: false, // true for 465, false for other ports
+        secure: false,
         auth: {
           user: 'tauheeddarekar786@gmail.com',
           pass: 'vzrsjndnlqbrrqdh',

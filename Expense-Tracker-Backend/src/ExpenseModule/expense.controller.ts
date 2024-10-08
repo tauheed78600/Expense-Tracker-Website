@@ -4,7 +4,7 @@ import { Expense } from 'src/entity/expense.entity';
 import { AuthGuard } from '@nestjs/passport';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { ApiBody } from '@nestjs/swagger';
-import { DeleteExpenseDto } from 'src/dto/deleteExpense.dto'; 
+import { DeleteExpenseDto } from 'src/dto/deleteExpense.dto';
 import { JwtAuthGuard } from 'src/LoginModule/jwt-auth.guard';
 import { JwtService } from "@nestjs/jwt";
 
@@ -98,6 +98,6 @@ async addExpense(@Body() expenseEntity: Expense, @Query("token") token: string) 
   {
     const decodedToken = this.jwtService.decode(token)
     const userId = decodedToken.sub
-    return this.expenseService.UpdatingExpenses(expenseEntity, userId);
+    return this.expenseService.updatingExpenses(expenseEntity, userId);
   }
 }

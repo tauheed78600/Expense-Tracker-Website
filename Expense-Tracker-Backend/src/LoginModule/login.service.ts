@@ -114,15 +114,6 @@ export class LoginService {
       this.tokenCache[token] = email;
       const resetUrl = `http://localhost:3001/reset-password?token=${token}`;
 
-      // Use SendGrid to send the email
-      // await this.sendGridService.send({
-      //   to: email,
-      //   from: 'Tdarekar@parkar.digital', 
-      //   subject: 'Password Reset Request',
-      //   text: `Click on the below Link to reset the password`,
-      //   html: `<p>Click on the following link to reset your password:</p><a href="${resetUrl}">${resetUrl}</a>`,
-
-      // });
       await this.emailService.sendEmail(
         email,
         'Password Reset Request',`Click on the below Link to reset the password`,
@@ -130,7 +121,7 @@ export class LoginService {
       );
     } else {
       console.log("exception found line 131")
-      throw new NotFoundException('Email not found');
+      throw new NotFoundException('Email not found'); 
     }
   }
 
@@ -151,6 +142,7 @@ export class LoginService {
   }
 
   async sendEmailBudgetExceeded(email: string): Promise<void> {
+    console.log("inside exception")
     const user = await this.userRepository.findOne({ where: { email } });
     if (user) {
       const token = Math.random().toString(20).substring(2, 12);
@@ -166,6 +158,7 @@ export class LoginService {
       );
       
     } else {
+      console.log("inside exception")
       throw new NotFoundException('Email not found');
     }
   }
@@ -186,6 +179,7 @@ export class LoginService {
         '<p>Thank You</p>'
       );
     } else {
+      console.log("inside exception")
       throw new NotFoundException('Email not found');
     }
 
