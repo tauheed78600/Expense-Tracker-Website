@@ -11,7 +11,7 @@
   width:   500px;
   height:   700px;
   z-index:   10;
-  background-color: #d60606; /* Light grey background */
+  background-color: #28a745; /* Light grey background */
   font-size:   17px;
   color: black; /* Black text for better contrast */
   position: absolute;
@@ -26,7 +26,7 @@
   width:   500px;
   height:   700px;
   z-index:   10;
-  background-color: #d60606; /* Light grey background */
+  background-color: #28a745; /* Light grey background */
   font-size:   17px;
   color: black; /* Black text for better contrast */
   position: absolute;
@@ -94,7 +94,7 @@
 #expense-table th {
   user-select: none;
   text-align: center;
-  background-color: #e26f6f;
+  background-color: #28a745;
   color: white;
 }
 
@@ -107,7 +107,7 @@
 }
 
 #expense-table button {
-  background-color: #e26f6f;
+  background-color: #28a745;
   color: white;
   padding:   5px   10px;
   border: none;
@@ -127,7 +127,7 @@
 }
 
 #expense-table button:hover {
-  background-color: #e26f6f;
+  background-color: #28a745;
 }
 
 #page-selector {
@@ -137,7 +137,7 @@
   margin-top: 10px;
 }
 #expense-table-selector-button {
-  background-color: #e26f6f;
+  background-color: #28a745;
   color: white;
   user-select: none;
   display: flex;
@@ -238,7 +238,7 @@ margin-right:   10px;
 /* Styles for the report buttons */
 .report-button {
 /* background: linear-gradient(to right, #009fff, #ec2f4b); */
-background: linear-gradient(to right, #ffc0cb, #e26f6f);
+background: linear-gradient(to right, #ffc0cb, #28a745);
 border: none;
 color: white;
 padding:   10px   20px;
@@ -289,9 +289,9 @@ body {
 
 /* Color Scheme */
 :root {
-  --primary-color: #007bff;
-  --secondary-color: #f8f9fa;
-  --error-color: #dc3545;
+  --primary-color: #05592d;
+  --secondary-color: #f8f9fa; 
+  --error-color: #28a745;
 }
 
 /* Spacing and Layout */
@@ -320,7 +320,7 @@ body {
 }
 
 .report-button:hover {
-  background-color: #0056b3;
+  background-color: #05592d;
   transform: translateY(-3px);
   box-shadow:  0  4px  8px rgba(0,  0,  0,  0.2);
 }

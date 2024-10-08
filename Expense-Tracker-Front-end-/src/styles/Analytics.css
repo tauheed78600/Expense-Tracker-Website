@@ -8,6 +8,11 @@
   align-items: center;
   padding:  20px;
   height: 900px;
+  color: #28a745;
+}
+
+.sc-iqcoie{
+  color: #28a745;
 }
 
 .button-anal-div {
@@ -20,18 +25,21 @@
   float: left;
   height: 80px !important;
   text-align: center;
-  color: white; 
+  color: #28a745; 
   border: none; 
   border-radius: 5px; 
   padding: 10px 10px; 
-  
   margin-bottom: 50px;
   font-size: 18px; 
   cursor: pointer; 
-  /* transition: background-color 0.3s ease; */
+  transition: background-color 0.3s ease;
   width: 300px;
   justify-content: space-between !important; 
   gap: 10px !important; 
+ }
+
+ .button-anal :hover{
+  color: #28a745;
  }
 
  

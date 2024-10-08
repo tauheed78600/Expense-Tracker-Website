@@ -1,9 +1,9 @@
-// Auth.js
 import React, { useState } from 'react';
 import SignInForm from './SignInForm';
 import SignUpForm from './SignUpForm';
 import * as Components from './Components';
 import Cookies from 'universal-cookie';
+import "./styles/Analytics.css"
 
 const Auth = ({ setCurrentPage, setUserId }) => {
   const cookies = new Cookies();
@@ -18,16 +18,13 @@ const Auth = ({ setCurrentPage, setUserId }) => {
       console.error('Login response data is missing userId:', responseData);
       return;
     }
-    // console.log('Login successful, responseData:', responseData);
     const userId = responseData.userId;
-    // console.log('Login successful, userId:', userId);
     cookies.set('userId', userId, { path: '/' });
-    setUserId(userId); // Set userId in the state
+    setUserId(userId);
   };
 
   return (
-    <Components.Container style={{"display":"flex","alignItems":"center", "justifyContent":"center",
-    "top":"0", "bottom":"0", "left":"0", "right":"0"}}>
+    <Components.Container style={{ display: "flex", alignItems: "center", justifyContent: "center", top: "0", bottom: "0", left: "0", right: "0" }}>
       {isSignUp ? (
         <>
           <Components.SignUpContainer>
@@ -37,7 +34,9 @@ const Auth = ({ setCurrentPage, setUserId }) => {
             <Components.Overlay />
             <Components.OverlayPanel>
               <Components.Title>Already have an account?</Components.Title>
-              <Components.Button onClick={toggleForm} style={{"width":"150px", "marginLeft":"150px"}}>Sign In</Components.Button>
+              <Components.Button onClick={toggleForm} style={{ width: "150px", marginLeft: "150px", backgroundColor: "#28a745", color: "white" }}>
+                Sign In
+              </Components.Button>
             </Components.OverlayPanel>
           </Components.OverlayContainer>
         </>
@@ -50,7 +49,9 @@ const Auth = ({ setCurrentPage, setUserId }) => {
             <Components.Overlay />
             <Components.OverlayPanel>
               <Components.Title>Don't have an account?</Components.Title>
-              <Components.Button onClick={toggleForm} style={{"width":"150px", "marginLeft":"150px"}}>Sign Up</Components.Button>
+              <Components.Button onClick={toggleForm} style={{ width: "150px", marginLeft: "150px", backgroundColor: "#28a745", color: "white" }}>
+                Sign Up
+              </Components.Button>
             </Components.OverlayPanel>
           </Components.OverlayContainer>
         </>

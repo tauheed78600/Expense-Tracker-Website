@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-/*import Excel from 'exceljs';*/
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import { saveAs } from 'file-saver';
@@ -110,12 +109,7 @@ const ReportGenerate = () =>
     
         fetchExpenses();
     }, []);
-    
-    
-    
-    
-    
-    
+     
     const handleDailyReport = () => {
         if (dailyReportDate === "") {
         setContent(masterContent["dailyReportError"]);
@@ -214,14 +208,6 @@ const ReportGenerate = () =>
         setLoading(false);
         console.error('Error generating PDF report:', error);
         }
-    
-    
-    /* const buf = await workbook.xlsx.writeBuffer();
-    saveAs(new Blob([buf]), 'Expenses_Report.xlsx');
-    setLoading(false);
-    } catch (error) {
-    setLoading(false);
-    console.error('Error generating Excel report:', error);*/
     };
     
     
@@ -322,7 +308,7 @@ const ReportGenerate = () =>
                     </Form.Label>
                     <Col sm={10}>
                     <Dropdown>
-                    <Dropdown.Toggle style={{"width":"200px","backgroundColor":"#e26f6f", "marginLeft":"50px", "marginTop":"40px"}} variant="success" id="dropdown-basic">
+                    <Dropdown.Toggle style={{"width":"200px","backgroundColor":"#28a745", "marginLeft":"50px", "marginTop":"40px"}} variant="success" id="dropdown-basic">
                       <span>
                         {selected_categories.length === 0? 
                         <>Choose Category

@@ -7,6 +7,7 @@ import {
   LogOut,
   ClipboardPlus,
 } from "lucide-react";
+import "../styles/Navbar.css"
 import { motion } from "framer-motion";
 import RightArrowIcon from "./../assets/icons/rightArrow.svg";
 import Logo from "../assets/Logo.png";
@@ -52,7 +53,7 @@ function Navbar({ setCurrentPage }) {
     >
       <div
         onClick={() => setIsExpanded(!isExpanded)}
-        className="cursor-pointer absolute -right-3 top-10 rounded-full w-6 h-6 bg-[#FF8C8C] flex justify-center items-center"
+        className="cursor-pointer absolute -right-3 top-10 rounded-full w-6 h-6 bg-[#28a745] flex justify-center items-center"
       >
         <img src={RightArrowIcon} className="w-2" />
       </div>

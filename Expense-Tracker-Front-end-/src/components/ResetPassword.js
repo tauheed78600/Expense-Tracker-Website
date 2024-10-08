@@ -7,10 +7,9 @@ import PopupModal from './PopupModal';
 import SpinnerComponent from './SpinnerComponent';
 import "../styles/ResetPassword.css";
 
-
 const ResetPassword = () => {
     const location = useLocation();
-    const queryParams = new URLSearchParams(location.search);
+    const queryParams = new URLSearchParams(location.search);     
     const token = queryParams.get('token');
     const [newPassword, setNewPassword] = useState('');
     const [confirmNewPassword, setConfirmNewPassword] = useState('');

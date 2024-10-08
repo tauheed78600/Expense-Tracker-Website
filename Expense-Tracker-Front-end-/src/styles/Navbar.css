@@ -1,0 +1,13 @@
+.nav-links.active {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+  }
+  
+  .nav-links {
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links .flex {
+    color: inherit; /* Inherit color for icons and text */
+  }
+  

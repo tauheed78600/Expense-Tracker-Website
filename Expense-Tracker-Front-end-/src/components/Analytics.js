@@ -256,10 +256,10 @@ const [content, setContent] = useState(masterContent["fetchError"]);
   return (
     <div className="analytics-container">
       <div className='button-anal-div'>
-      <button type="button" class="btn btn-outline-danger button-anal" onClick={()=> {setSelection(1)}}>Line Chart</button>
-      <button type="button" class="btn btn-outline-danger button-anal" onClick={()=> {setSelection(2)}}>Bar Chart</button>
-      <button type="button" class="btn btn-outline-danger button-anal" onClick={()=> {setSelection(3)}}>Pie Chart</button>
-      </div>
+      <button type="button" class="btn btn-outline-success button-anal" onClick={()=> {setSelection(1)}}>Line Chart</button>
+      <button type="button" class="btn btn-outline-success button-anal" onClick={()=> {setSelection(2)}}>Bar Chart</button>
+      <button type="button" class="btn btn-outline-success button-anal" onClick={()=> {setSelection(3)}}>Pie Chart</button>
+    </div>
 
       <SpinnerComponent state={loading} setState={setLoading}/>
       <PopupModal state={popupState} setState={handlePopupState} content={content}/>
