@@ -38,8 +38,8 @@ import { join } from 'path';
     }),
     TypeOrmModule.forRoot({
     type: 'mysql',
-    host: 'mysql.railway.internal',
-    port: 3306,
+    host: 'mysql://root:ktElASbfzWzaRBDlhfqQLDkCsdAzotCz@autorack.proxy.rlwy.net:43057/railway',
+    port: 43057 ,
     username: 'root',
     password: 'ktElASbfzWzaRBDlhfqQLDkCsdAzotCz',
     database: 'railway',
