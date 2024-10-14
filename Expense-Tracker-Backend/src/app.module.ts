@@ -38,14 +38,14 @@ import { join } from 'path';
     }),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'autorack.proxy.rlwy.net', // Host without "mysql://"
-      port: 43057,                       // Use the public port
-      username: 'root',
-      password: 'ktElASbfzWzaRBDlhfqQLDkCsdAzotCz',
+      host: 'autorack.proxy.rlwy.net',
+      port: 43057,
+      username: 'newuser', // Use the new username
+      password: 'your_password', // Use the new password
       database: 'railway',
       entities: [UserEntity, Expense],
       synchronize: true,
-    }),
+    }),    
   LoginModule,
   ChartModule,
   ExpenseModule,
