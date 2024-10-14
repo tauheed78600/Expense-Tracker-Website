@@ -46,7 +46,6 @@ import { join } from 'path';
       entities: [UserEntity, Expense],
       synchronize: true,
     }),
-    ,
   LoginModule,
   ChartModule,
   ExpenseModule,
