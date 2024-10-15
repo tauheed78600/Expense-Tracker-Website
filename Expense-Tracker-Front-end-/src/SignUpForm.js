@@ -202,12 +202,6 @@ const SignUpForm = () => {
     event.preventDefault();
     
     if (validateForm()) {
-      if(!token)
-      {
-          setContent(masterContent["captchaError"]);
-          setPopupState(true);
-      }
-      else
       {
       try {
         setLoading(true);

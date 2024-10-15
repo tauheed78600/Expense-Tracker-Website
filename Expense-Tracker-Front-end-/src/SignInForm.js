@@ -117,12 +117,6 @@ const validForm = () => {
     }
     
     if (validateForm()) {
-      if(!token)
-      {
-          setContent(masterContent["captchaError"]);
-          setPopupState(true);
-      }
-      else
       {try {
         setLoading(true);
         // Append email and password as query parameters to the URL
