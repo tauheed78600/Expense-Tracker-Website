@@ -150,7 +150,6 @@ const ForgotPassword = () => {
           style={{ width: "50%" }}
         />
         <label id="forgot-password-email"></label>
-        {formValid === true &&(<ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} ref={captchaRef}/>)}
         <Components.Button type="submit">Send Link</Components.Button>
       </Components.Form>
     </>

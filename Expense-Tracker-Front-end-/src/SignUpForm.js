@@ -317,7 +317,6 @@ const SignUpForm = () => {
         style={{"marginBottom":"20px"}}
       />
       {monthlyBudgetError && <p style={{ color: 'red' }}>{monthlyBudgetError}</p>}
-      {formValid === true &&(<ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} ref={captchaRef}/>)}
       <Components.Button id="button-signup"type='submit'>Sign Up</Components.Button>
     </Components.Form>
     </>

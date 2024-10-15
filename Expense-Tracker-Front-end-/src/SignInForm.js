@@ -197,8 +197,7 @@ const validForm = () => {
           style={{"marginBottom":"20px"}}
         />
         {passwordError && <p style={{ color: 'red' }}>{passwordError}</p>}
-        {formValid === true &&(<ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} ref={captchaRef}/>)}
-            
+          
         <div style={{"display":"flex", "gap":"5px"}}>
               <Components.Button type='submit' id="button-signin">
                 Sign In</Components.Button>
