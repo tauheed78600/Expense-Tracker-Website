@@ -38,11 +38,11 @@ import { join } from 'path';
     }),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'autorack.proxy.rlwy.net',
-      port: 43057,
-      username: 'newuser', // Use the new username
-      password: 'your_password', // Use the new password
-      database: 'railway',
+      host: 'sql12.freesqldatabase.com',
+      port: 3306,
+      username: 'sql12737926',
+      password: 'Qxl3LfywAA',
+      database: 'sql12737926',
       entities: [UserEntity, Expense],
       synchronize: true,
     }),    
@@ -58,4 +58,4 @@ import { join } from 'path';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {} 
