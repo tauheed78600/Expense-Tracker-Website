@@ -39,10 +39,10 @@ const [content, setContent] = useState(masterContent["fetchError"]);
     const fetchData = async () => {
       try {
         setLoading(true);
-        const expensesResponse = await axios.get(`http://localhost:3000/api/data/${userId}`);
-        const categoriesResponse = await axios.get(`http://localhost:3000/api/data1/${userId}`);
-        const merchantsResponse = await axios.get(`http://localhost:3000/api/data1/${userId}`);
-        const paymentModesResponse = await axios.get(`http://localhost:3000/api/data3/${userId}`);
+        const expensesResponse = await axios.get(`https://expense-tracker-website-8.onrender.com/api/data/${userId}`);
+        const categoriesResponse = await axios.get(`https://expense-tracker-website-8.onrender.com/api/data1/${userId}`);
+        const merchantsResponse = await axios.get(`https://expense-tracker-website-8.onrender.com/api/data1/${userId}`);
+        const paymentModesResponse = await axios.get(`https://expense-tracker-website-8.onrender.com/api/data3/${userId}`);
         setLoading(false);
         setExpensesData({
           expenses: expensesResponse.data,

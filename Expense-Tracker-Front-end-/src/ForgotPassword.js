@@ -89,9 +89,9 @@ const ForgotPassword = () => {
       {
         try {
           setLoading(true);
-          // const response = await axios.post(`http://localhost:3000/total/forgotPassword/?email=${encodeURIComponent(email)}`);
+          // const response = await axios.post(`https://expense-tracker-website-8.onrender.com/total/forgotPassword/?email=${encodeURIComponent(email)}`);
           const response = await axios.post(
-            "http://localhost:3000/total/forgotPassword",
+            "https://expense-tracker-website-8.onrender.com/total/forgotPassword",
             { email },
             { headers: { "Content-Type": "application/json" } }
           );

@@ -86,7 +86,7 @@ const handleUpdate = async () => {
     }
     else if(newUsername !== currentUsername)
     {
-      const updateUserEndpointURL = `http://localhost:3000/total/updateUsername/?token=${encodeURIComponent(cookies.get('access_token'))}&username=${encodeURIComponent(newUsername)}`;
+      const updateUserEndpointURL = `https://expense-tracker-website-8.onrender.com/total/updateUsername/?token=${encodeURIComponent(cookies.get('access_token'))}&username=${encodeURIComponent(newUsername)}`;
       // console.log("inside first condition")
           try {
           const response = await axios.put(updateUserEndpointURL, {}, {
@@ -115,7 +115,7 @@ const handleUpdate = async () => {
         } 
       };
       if (newEmail !== currentEmail) {
-        const updateUserEndpointURL = `http://localhost:3000/total/updateEmail/?token=${encodeURIComponent(cookies.get('access_token'))}&email=${encodeURIComponent(newEmail)}`;
+        const updateUserEndpointURL = `https://expense-tracker-website-8.onrender.com/total/updateEmail/?token=${encodeURIComponent(cookies.get('access_token'))}&email=${encodeURIComponent(newEmail)}`;
         // console.log("inside second condition")
             try {
             const response = await axios.put(updateUserEndpointURL, {}, {

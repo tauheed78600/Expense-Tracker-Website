@@ -149,7 +149,7 @@ export default function Transactions({ userId }) {
     useEffect(() => {
         const fetchExpenses = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/expenses/${accessToken}`, {
+                const response = await axios.get(`https://expense-tracker-website-8.onrender.com/expenses/${accessToken}`, {
                     headers: {
                       Authorization: `Bearer ${accessToken}`,
                     },
@@ -174,7 +174,7 @@ export default function Transactions({ userId }) {
                
                 const emailId = response.data.email
                 
-                const response1 = await axios.get(`http://localhost:3000/total/${accessToken}`, {
+                const response1 = await axios.get(`https://expense-tracker-website-8.onrender.com/total/${accessToken}`, {
                             headers: {
                               Authorization: `Bearer ${accessToken}`,
                             },
@@ -191,7 +191,7 @@ export default function Transactions({ userId }) {
                     const lastMonthNineReachedEmailSent = cookies.get('lastMonthNineReachedEmailSent');
                     
                     if (lastMonthNineReachedEmailSent !== currentMonth.toString()) {
-                        const response = await axios.post(`http://localhost:3000/total/send-email/budget-exceeded`, { token: accessToken }, {
+                        const response = await axios.post(`https://expense-tracker-website-8.onrender.com/total/send-email/budget-exceeded`, { token: accessToken }, {
                             headers: {
                               Authorization: `Bearer ${accessToken}`,
                             },
@@ -215,7 +215,7 @@ export default function Transactions({ userId }) {
                     const currentMonth = new Date().getMonth();
                     const lastMonthEmailSent = cookies.get('lastMonthEmailSent');
                     if (lastMonthEmailSent !== currentMonth.toString()){
-                    const response = await axios.post(`http://localhost:3000/total/send-email/budget-exceeded`, { token: accessToken   }, {
+                    const response = await axios.post(`https://expense-tracker-website-8.onrender.com/total/send-email/budget-exceeded`, { token: accessToken   }, {
                         headers: {
                           Authorization: `Bearer ${accessToken}`,
                         },
@@ -265,7 +265,7 @@ export default function Transactions({ userId }) {
         // console.log("expenses[index].expenseId", expenses[index].expenseId)
         // console.log(expenses[index]);
         
-        axios.delete('http://localhost:3000/expenses/deleteExpense', {
+        axios.delete('https://expense-tracker-website-8.onrender.com/expenses/deleteExpense', {
             data: {
                 expense_id: expenses[index].expenseId,      
                 user_id: cookies.get("userId")

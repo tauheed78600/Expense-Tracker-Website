@@ -32,7 +32,7 @@ const accessToken = cookies.get('access_token');
 // console.log("accessToke indashboard", accessToken)
 const fetchData = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/total/getUser/${accessToken}`, {
+      const response = await axios.get(`https://expense-tracker-website-8.onrender.com/total/getUser/${accessToken}`, {
         headers: {
             Authorization: `Bearer ${accessToken}`,
         },
@@ -56,7 +56,7 @@ fetchData();
 }, [userId]);
 
 const handleUpdate = async () => {
-  const updateUserEndpoint = `http://localhost:3000/total/updateUser/${userId}`;
+  const updateUserEndpoint = `https://expense-tracker-website-8.onrender.com/total/updateUser/${userId}`;
  
   try {
      const response = await axios.put(updateUserEndpoint, {

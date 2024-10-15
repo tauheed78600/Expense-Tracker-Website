@@ -24,7 +24,7 @@ function MonthlyBudgetModal() {
         const accessToken = cookies.get('access_token');
         try {
           setLoading(true);
-            const response = await axios.get(`http://localhost:3000/total/${accessToken}`, {
+            const response = await axios.get(`https://expense-tracker-website-8.onrender.com/total/${accessToken}`, {
               headers: {
                 Authorization: `Bearer ${accessToken}`,
               },
@@ -138,7 +138,7 @@ function MonthlyBudgetModal() {
           
           try {
             setLoading(true); 
-            const response = await axios.put(`http://localhost:3000/expenses/budget-goal?monthly_budget=${newBudget}&token=${accessToken}`, {}, {
+            const response = await axios.put(`https://expense-tracker-website-8.onrender.com/expenses/budget-goal?monthly_budget=${newBudget}&token=${accessToken}`, {}, {
               headers: {
                 Authorization: `Bearer ${accessToken}`,
               },

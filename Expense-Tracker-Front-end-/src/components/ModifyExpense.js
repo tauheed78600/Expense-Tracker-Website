@@ -217,7 +217,7 @@ export default function ModifyExpense({ onAddExpense, onEditExpense, loadExpense
             setPopupState(true);
             return;
         }
-        var apiURL = "http://localhost:3000/expenses/addExpense";
+        var apiURL = "https://expense-tracker-website-8.onrender.com/expenses/addExpense";
         const userId = cookies.get('userId');
         const expenseData = {
             // Assuming you want to set the expenseId to  1
@@ -262,7 +262,7 @@ export default function ModifyExpense({ onAddExpense, onEditExpense, loadExpense
         }
         else
         {
-            apiURL = "http://localhost:3000/expenses/updateExpense";
+            apiURL = "https://expense-tracker-website-8.onrender.com/expenses/updateExpense";
             
             const expenseData = {
             // Assuming you want to set the expenseId to  1

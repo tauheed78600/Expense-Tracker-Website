@@ -213,7 +213,7 @@ const SignUpForm = () => {
       try {
         setLoading(true);
         // var monthlyBudget = 0
-        // const response1 = await axios.get(`http://localhost:3000/total/getUsername/?username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}`)
+        // const response1 = await axios.get(`https://expense-tracker-website-8.onrender.com/total/getUsername/?username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}`)
         // console.log("response123", response1)
         // if (response1.data.status === 400)
         // {
@@ -223,7 +223,7 @@ const SignUpForm = () => {
         //   return;
         // }
         
-          const response = await axios.post('http://localhost:3000/total/register/', {
+          const response = await axios.post('https://expense-tracker-website-8.onrender.com/total/register/', {
           email,
           password,
           monthlyBudget,

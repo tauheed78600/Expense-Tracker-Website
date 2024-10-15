@@ -160,9 +160,9 @@ const ResetPassword = () => {
     {
       try {
         setLoading(true);
-          // const response = await axios.post(`http://localhost:3000/total/forgotPassword/?email=${encodeURIComponent(email)}`);
+          // const response = await axios.post(`https://expense-tracker-website-8.onrender.com/total/forgotPassword/?email=${encodeURIComponent(email)}`);
           const response = await axios.post(
-              'http://localhost:3000/total/resetPassword',
+              'https://expense-tracker-website-8.onrender.com/total/resetPassword',
               { 
                   "token": token,
                   "password": newPassword

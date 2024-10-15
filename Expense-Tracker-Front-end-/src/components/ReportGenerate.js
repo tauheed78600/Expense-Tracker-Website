@@ -74,13 +74,13 @@ const ReportGenerate = () =>
             // const userId = cookies.get('userId');
             const accessToken = cookies.get('access_token');
     
-            const response = await axios.get(`http://localhost:3000/expenses/${accessToken}`, {
+            const response = await axios.get(`https://expense-tracker-website-8.onrender.com/expenses/${accessToken}`, {
             headers: {
                 Authorization: `Bearer ${accessToken}`,
             },
             });
     
-            // const response = await axios.get(`http://localhost:3000/expenses/3`);/'
+            // const response = await axios.get(`https://expense-tracker-website-8.onrender.com/expenses/3`);/'
             var newArray = [];
             for (var index in response.data) {
             var row = response.data[index];

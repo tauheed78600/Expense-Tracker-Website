@@ -2,7 +2,7 @@
   "name": "loginform",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000",
+  "proxy": "https://expense-tracker-website-8.onrender.com",
   "dependencies": {
     "@mantine/core": "^7.6.1",
     "@material-tailwind/react": "^2.1.9",
