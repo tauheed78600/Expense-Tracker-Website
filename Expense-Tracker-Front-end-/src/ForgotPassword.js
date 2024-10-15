@@ -4,7 +4,6 @@ import * as Components from "./Components";
 import axios from "axios"; // Import Axios
 import PopupModal from "./components/PopupModal";
 import SpinnerComponent from "./components/SpinnerComponent";
-import ReCAPTCHA from "react-google-recaptcha";
 import "./styles/ForgotPassword.css";
 
 const ForgotPassword = () => {

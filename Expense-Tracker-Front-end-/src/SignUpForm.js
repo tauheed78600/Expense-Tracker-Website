@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import * as Components from './Components';
 import axios from 'axios';
 import SpinnerComponent from './components/SpinnerComponent';
-import ReCAPTCHA from "react-google-recaptcha";
 import PopupModal from './components/PopupModal';
 import "./styles/SignUpForm.css";
 

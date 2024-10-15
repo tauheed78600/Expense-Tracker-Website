@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthContext';
 import SpinnerComponent from './components/SpinnerComponent';
 import PopupModal from './components/PopupModal';
-import ReCAPTCHA from "react-google-recaptcha";
 import "./styles/SignInForm.css";
 import Cookies from 'universal-cookie';
  
